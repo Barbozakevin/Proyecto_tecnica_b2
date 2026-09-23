@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./lenguaje.css">
+  <title>Control De Tareas</title>
+</head>
+<body>
+  
+  <h1>Control De Tareas</h1>
+
+  <!-- Contenedor para mostrar fecha y hora -->
+  <div class="clock-container">
+    <div id="date"></div>
+    <div id="clock"></div>
+  </div>
+
+  <!-- Formulario para ingresar tareas -->
+  <form action="javascript:void(0);">
+    <label for="action">Ingrese Actividad</label>
+    <input type="text" id="action">
+    <button id="boton" class="animated-button" onclick="save()">AGREGAR</button>
+  </form>
+
+  <!-- Botones de filtrado y control -->
+  <div class="button-container"> 
+    <button class="animated-button" onclick="filtrarMarcadas()">TAREAS COMPLETADAS</button>
+    <button class="animated-button" onclick="filtrarNoMarcadas()">TAREAS PENDIENTES</button>
+    <button class="animated-button" onclick="mostrarTodas()">MOSTRAR TODAS LAS TAREAS</button>
+    <button class="animated-button" onclick="eliminarTodasLasFilas()">ELIMINAR TAREAS</button>
+  </div>
+
+  <!-- Tabla para mostrar las tareas -->
+  <table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Tareas</th>
+        <th>Registro</th> <!-- Nueva columna para la fecha y hora -->
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tabla">
+      <!-- Aquí se agregarán las filas de tareas dinámicamente -->
+    </tbody>
+  </table>
+
+  <!-- Scripts de JavaScript e iconos de Ionicons -->
+  <script src="./codigo.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
